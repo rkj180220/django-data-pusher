@@ -1,0 +1,24 @@
+[
+    {
+      "model": "core.account",
+      "pk": 1,
+      "fields": {
+        "email": "test1@example.com",
+        "account_id": 1,
+        "account_name": "Test Account 1",
+        "app_secret_token": "1234567890abcdef",
+        "website": "http://example1.com"
+      }
+    },
+    {
+      "model": "core.account",
+      "pk": 2,
+      "fields": {
+        "email": "test2@example.com",
+        "account_id": 2,
+        "account_name": "Test Account 2",
+        "app_secret_token": "abcdef1234567890",
+        "website": "http://example2.com"
+      }
+    }
+  ]

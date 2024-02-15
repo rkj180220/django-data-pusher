@@ -1,0 +1,17 @@
+INFO secret_token: 7f24e36c-14dd-46f0-ad41-b36da0d363b5
+INFO <QuerySet [<Destination: Test Account - https://api.example.com/endpoint>]>
+INFO Test Account - https://api.example.com/endpoint
+INFO secret_token: e9c91181-c28b-4cd2-990e-831ed46a277c
+INFO <QuerySet [<Destination: Test Account - https://api.example.com/endpoint>]>
+INFO Test Account - https://api.example.com/endpoint
+INFO secret_token: 0e35a1e1-f817-40ae-8e0b-eda9d06ae5cb
+INFO <QuerySet [<Destination: Test Account - https://api.example.com/endpoint>]>
+INFO Test Account - https://api.example.com/endpoint
+INFO D:\django\data_pusher\core\api\pusher.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO D:\django\data_pusher\core\api\pusher.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO D:\django\data_pusher\core\api\pusher.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO D:\django\data_pusher\core\api\pusher.py changed, reloading.
+INFO Watching for file changes with StatReloader

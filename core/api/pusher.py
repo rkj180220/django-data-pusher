@@ -3,12 +3,18 @@ from rest_framework.decorators import api_view
 import requests  # For making HTTP requests to destinations
 from ..models import Account, Destination
 
+# views.py
+
+# import logging
+# logger = logging.getLogger(__name__)
+
 @api_view(['POST'])
 def incoming_data(request):
-    if request.method != 'POST' or not request.is_json:
+    if request.method != 'POST' or not request.content_type == 'application/json':
         return JsonResponse({'error': 'Invalid request method or data format'}, status=400)
 
-    secret_token = request.META.get('CL-XTOKEN')
+    secret_token = request.META.get('HTTP_CL_X_TOKEN')
+
     if not secret_token:
         return JsonResponse({'error': 'Unauthenticated'}, status=401)
 
