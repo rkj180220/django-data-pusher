@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card">
+  <div class="card-header">
+    <strong> {{ destination_details.account }}</strong>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <strong>Account: </strong>{{ destination_details.account }}
+    </p>
+
+    <p class="card-text"><strong>URL: </strong>{{ destination_details.url }}</p>
+
+    <p class="card-text">
+      <strong>HTTP Method: </strong>{{ destination_details.http_method }}
+    </p>
+
+    <p class="card-text">
+      <strong>Headers: </strong>{{ destination_details.headers }}
+    </p>
+
+    <p class="card-text">
+      <strong>Destination ID: </strong>{{ destination_details.id }}
+    </p>
+  </div>
+</div>
+
+<br /><br />
+<a href="{% url 'destinations' %}" class="btn btn-secondary">Back</a>
+
+<a href="{% url 'delete_destination' destination_details.id %}" class="btn btn-danger"
+  >Delete</a
+>
+
+<a href="{% url 'update_destination' destination_details.id %}" class="btn btn-secondary"
+  >Update Destination</a
+>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Account Name</th>
+      <th scope="col">URL</th>
+      <th scope="col">HTTP Method</th>
+      <th scope="col">Headers</th>
+      <th scope="col">Destination ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+{% if destination_list %}
+	{% for destination in destination_list %}
+		<tr>
+			<td>{{ destination.account }}</td>
+			<td>{{ destination.url }}</td>
+			<td>{{ destination.http_method }}</td>
+			<td>{{ destination.headers }}</td>
+			<td><a href="{% url 'view_destination' destination.id %}">{{ destination.id }}</a></td>
+		</tr>
+	{% endfor %}
+
+{% endif %}
+
+	
+	  </tbody>
+	</table>
+
+{% endblock %}

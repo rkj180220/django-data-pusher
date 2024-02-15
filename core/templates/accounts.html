@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Account Name</th>
+      <th scope="col">App Secret Token</th>
+      <th scope="col">Website</th>
+      <th scope="col">Account ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+{% if account_list %}
+	{% for account in account_list %}
+		<tr>
+			<td>{{ account.email }}</td>
+			<td>{{ account.account_name }}</td>
+			<td>{{ account.app_secret_token }}</td>
+			<td>{{ account.website }}</td>
+			<td><a href="{% url 'view_account' account.account_id %}">{{ account.account_id }}</a></td>
+		</tr>
+	{% endfor %}
+
+{% endif %}
+
+	
+	  </tbody>
+	</table>
+
+{% endblock %}
