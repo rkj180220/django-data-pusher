@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .api import pusher
 
 
 urlpatterns = [
@@ -22,4 +23,7 @@ urlpatterns = [
 
     # Destination Routes
     path('account_destinations/<int:pk>', views.account_destinations, name='account_destinations'),
+
+    # API Endpoint
+    path('server/incoming_data', pusher.incoming_data, name='incoming_data'),
 ]
