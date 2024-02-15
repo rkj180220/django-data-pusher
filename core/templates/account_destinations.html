@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %} 
+{% if destination_list %} 
+    {% for destination in destination_list %}
+        <div class="card">
+        <div class="card-header">
+            <strong> {{ destination.account }}</strong>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+            <strong>Account: </strong>{{ destination.account }}
+            </p>
+
+            <p class="card-text"><strong>URL: </strong>{{ destination.url }}</p>
+
+            <p class="card-text">
+            <strong>HTTP Method: </strong>{{ destination.http_method }}
+            </p>
+
+            <p class="card-text">
+            <strong>Headers: </strong>{{ destination.headers }}
+            </p>
+
+            <p class="card-text">
+            <strong>Destination ID: </strong>{{ destination.id }}
+            </p>
+        </div>
+        </div>
+        <br>
+    {% endfor %} 
+{% else %} 
+    No Destinations for the Account 
+    <br>
+{% endif %} 
+<a href="{% url 'accounts' %}" class="btn btn-secondary">Back</a>
+{% endblock %}

@@ -20,4 +20,6 @@ urlpatterns = [
     path('add_destination/', views.add_destination, name='add_destination'),
     path('update_destination/<int:pk>', views.update_destination, name='update_destination'),
 
+    # Destination Routes
+    path('account_destinations/<int:pk>', views.account_destinations, name='account_destinations'),
 ]

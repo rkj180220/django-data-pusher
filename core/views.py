@@ -81,4 +81,10 @@ def update_destination(request, pk):
 		return redirect('destinations')
 	return render(request, 'update_destination.html', {'form':form})
 
+def account_destinations(request, pk):
+	# Look Up Records
+	current_record = Account.objects.get(account_id=pk)
+	destination_list = Destination.objects.filter(account=current_record)
+	return render(request, 'account_destinations.html', {'destination_list':destination_list})
+
 
